@@ -12,12 +12,12 @@ class NetworkDataFetch {
     
     private init() {}
     
-    func fetchUsers(responce: @escaping ([Users]?, NetworkError?) -> Void) {
+    func fetchUsers(responce: @escaping ([User]?, NetworkError?) -> Void) {
         NetworkRequest.shared.getData { result in
             switch result {
             case .success(let data):
                 do {
-                    let users = try JSONDecoder().decode([Users].self, from: data)
+                    let users = try JSONDecoder().decode([User].self, from: data)
                     responce(users, nil)
                 } catch let jsonError {
                     print("Failed to decode JSON", jsonError)

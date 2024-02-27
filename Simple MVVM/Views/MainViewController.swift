@@ -56,6 +56,12 @@ class MainViewController: UIViewController {
             reloadTableView()
         }
     }
+    
+    func presentDetailsViewController(user: User) {
+        let detailsViewModel = DetailsViewModel(user: user)
+        let detailsVC = DetailsViewController(detailsViewModel)
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
 }
 
 extension MainViewController {

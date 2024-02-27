@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  User.swift
 //  Simple MVVM
 //
 //  Created by Marat Shagiakhmetov on 22.02.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Users: Codable {
+struct User: Codable {
     let name: String
     let username: String
     let email: String
